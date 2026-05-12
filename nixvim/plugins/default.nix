@@ -1,0 +1,22 @@
+{
+  imports = [
+    ./extra
+    ./cmp.nix
+    ./cord.nix
+    ./flash.nix
+    ./treesj.nix
+    ./crates.nix
+    ./conform.nix
+    ./no-conf.nix
+    ./gitsigns.nix
+    ./neo-tree.nix
+    ./autopairs.nix
+    ./telescope.nix
+    ./colorizer.nix
+    ./lightline.nix
+    ./mini-align.nix
+    ./treesitter.nix
+    ./rustaceanvim.nix
+    ./mini-surround.nix
+  ];
+}
