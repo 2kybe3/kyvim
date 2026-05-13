@@ -8,6 +8,7 @@
     ./crates.nix
     ./conform.nix
     ./no-conf.nix
+    ./orgmode.nix
     ./gitsigns.nix
     ./neo-tree.nix
     ./autopairs.nix
