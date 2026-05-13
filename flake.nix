@@ -23,12 +23,34 @@
           config.allowUnfree = true;
         };
 
-        nvim = nixvim.legacyPackages.${system}.makeNixvimWithModule {
+        base = nixvim.legacyPackages.${system}.makeNixvimWithModule {
           inherit pkgs;
           module = import ./nixvim;
           extraSpecialArgs = {
             inherit inputs;
           };
+        };
+
+        nvim = pkgs.symlinkJoin {
+          name = "nvim";
+
+          paths = [ base ];
+
+          buildInputs = with pkgs; [ makeWrapper ];
+
+          postBuild = ''
+            wrapProgram $out/bin/nvim \
+              --prefix PATH : ${
+                pkgs.lib.makeBinPath (
+                  with pkgs;
+                  [
+                    emacs
+                    pandoc
+                    texliveFull
+                  ]
+                )
+              }
+          '';
         };
       in
       {
