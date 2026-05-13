@@ -31,27 +31,31 @@
           };
         };
 
-        nvim = pkgs.symlinkJoin {
-          name = "nvim";
+        nvim =
+          pkgs.symlinkJoin {
+            name = "nvim";
 
-          paths = [ base ];
+            paths = [ base ];
 
-          buildInputs = with pkgs; [ makeWrapper ];
+            buildInputs = with pkgs; [ makeWrapper ];
 
-          postBuild = ''
-            wrapProgram $out/bin/nvim \
-              --prefix PATH : ${
-                pkgs.lib.makeBinPath (
-                  with pkgs;
-                  [
-                    emacs
-                    pandoc
-                    texliveFull
-                  ]
-                )
-              }
-          '';
-        };
+            postBuild = ''
+              wrapProgram $out/bin/nvim \
+                --prefix PATH : ${
+                  pkgs.lib.makeBinPath (
+                    with pkgs;
+                    [
+                      emacs
+                      pandoc
+                      texliveFull
+                    ]
+                  )
+                }
+            '';
+          }
+          // {
+            meta = base.meta;
+          };
       in
       {
         packages.default = nvim;
