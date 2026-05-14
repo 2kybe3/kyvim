@@ -10,7 +10,7 @@
       key = "gD";
     }
     {
-      key = "<leader>ff";
+      key = "<leader>fm";
       lspBufAction = "format";
     }
     {
