@@ -9,6 +9,7 @@
     ./conform.nix
     ./no-conf.nix
     ./orgmode.nix
+    ./harpoon.nix
     ./gitsigns.nix
     ./neo-tree.nix
     ./autopairs.nix
