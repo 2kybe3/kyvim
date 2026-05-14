@@ -9,6 +9,7 @@
     wrap = false;
     smarttab = true;
     scrolloff = 10;
+    relativenumber = true;
 
     tabstop = 4;
     softtabstop = 4;
