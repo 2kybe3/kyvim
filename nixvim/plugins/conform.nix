@@ -7,7 +7,6 @@
         lsp_format = "fallback";
       };
       formatters_by_ft = {
-        nix = [ "nixfmt" ];
         html = [ "html_beautify" ];
       };
     };

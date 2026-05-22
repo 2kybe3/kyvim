@@ -48,6 +48,7 @@
                       emacs
                       pandoc
                       texliveFull
+                      js-beautify
                     ]
                   )
                 }
