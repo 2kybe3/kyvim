@@ -2,7 +2,7 @@
   description = "kyvim - My nixvim (neovim) config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
     nixvim.url = "github:nix-community/nixvim";
   };
