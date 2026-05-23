@@ -64,15 +64,15 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1779554149,
+        "lastModified": 1779554657,
         "narHash": "sha256-qjLcUp7DBpmSUL+nVjLymp2nEvAzeKKoAVDCRgZYxFk=",
-        "owner": "kybe236",
+        "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "54386b6380ee1e4d199e9211146f8c0802735da8",
+        "rev": "1a380f12453ba97ad8cc9c60f223afb1cb8bace8",
         "type": "github"
       },
       "original": {
-        "owner": "kybe236",
+        "owner": "nix-community",
         "repo": "nixvim",
         "type": "github"
       }
