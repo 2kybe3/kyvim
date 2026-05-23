@@ -19,7 +19,6 @@
       bashls.enable = true;
       fish_lsp.enable = true;
       superhtml.enable = true;
-      tailwindcss.enable = true;
     };
   };
 }
