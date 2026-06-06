@@ -38,7 +38,7 @@
 
         nvim =
           pkgs.symlinkJoin {
-            name = "nvim";
+            inherit (base) name;
 
             paths = [ base ];
 
@@ -60,7 +60,7 @@
             '';
           }
           // {
-            meta = base.meta;
+            inherit (base) meta options;
           };
       in
       {

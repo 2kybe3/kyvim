@@ -6,6 +6,7 @@
         enable = true;
         settings.nix.flake = {
           autoArchive = true;
+          autoEvalInputs = true;
         };
       };
       zls.enable = true;
