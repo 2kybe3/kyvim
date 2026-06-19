@@ -3,7 +3,7 @@
   plugins = {
     treesitter-context = {
       enable = true;
-      max_lines = 4;
+      settings.max_lines = 4;
     };
     treesitter = {
       enable = true;
