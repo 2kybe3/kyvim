@@ -1,8 +1,10 @@
 { pkgs, ... }:
 {
   plugins = {
-    treesitter-textobjects.enable = true;
-    treesitter-context.enable = true;
+    treesitter-context = {
+      enable = true;
+      max_lines = 4;
+    };
     treesitter = {
       enable = true;
       highlight.enable = true;
