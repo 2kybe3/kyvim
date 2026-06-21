@@ -12,10 +12,10 @@
       grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
         typescript
         javascript
+        git-rebase
         superhtml
         markdown
         vimdoc
-        svelte
         regex
         rust
         just
@@ -23,14 +23,15 @@
         bash
         make
         toml
-        fish
         json
+        hurl
         lua
         nix
         vim
         csv
         xml
         css
+        ron
       ];
     };
   };
