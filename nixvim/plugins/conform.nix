@@ -8,6 +8,7 @@
       };
       formatters_by_ft = {
         html = [ "html_beautify" ];
+        nix = [ "alejandra" ];
       };
     };
   };
