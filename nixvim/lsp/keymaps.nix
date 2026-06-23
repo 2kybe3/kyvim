@@ -1,5 +1,4 @@
-{ lib, ... }:
-{
+{ lib, ... }: {
   lsp.keymaps = [
     {
       action = lib.nixvim.mkRaw "require('telescope.builtin').lsp_definitions";

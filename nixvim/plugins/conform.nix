@@ -7,8 +7,11 @@
         lsp_format = "fallback";
       };
       formatters_by_ft = {
-        html = [ "html_beautify" ];
-        nix = [ "alejandra" ];
+        javascript = [
+          "prettierd"
+          "prettier"
+        ];
+        nix = [ "nixfmt" ];
       };
     };
   };

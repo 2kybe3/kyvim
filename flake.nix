@@ -50,10 +50,9 @@
                   pkgs.lib.makeBinPath (
                     with pkgs;
                     [
-                      emacs
-                      pandoc
-                      texliveFull
-                      js-beautify
+                      nixfmt
+                      prettier
+                      prettierd
                     ]
                   )
                 }
