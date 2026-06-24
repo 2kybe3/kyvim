@@ -9,29 +9,34 @@
       highlight.enable = true;
 
       grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
-        typescript
-        javascript
-        git-rebase
-        superhtml
-        markdown
-        vimdoc
-        regex
-        caddy
-        rust
-        just
-        yaml
         bash
-        make
-        toml
-        json
-        hurl
-        lua
-        nix
-        vim
-        csv
-        xml
+        c
+        caddy
+        cmake
+        comment
         css
+        csv
+        git-rebase
+        hurl
+        javascript
+        json
+        just
+        lua
+        make
+        markdown
+        nix
+        regex
         ron
+        rust
+        sql
+        superhtml
+        toml
+        typescript
+        vim
+        vimdoc
+        xml
+        yaml
+        zsh
       ];
     };
   };
