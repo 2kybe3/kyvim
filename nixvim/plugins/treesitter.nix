@@ -16,6 +16,7 @@
         markdown
         vimdoc
         regex
+        caddy
         rust
         just
         yaml
