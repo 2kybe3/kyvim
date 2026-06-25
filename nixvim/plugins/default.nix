@@ -11,6 +11,7 @@
     ./orgmode.nix
     ./harpoon.nix
     ./gitsigns.nix
+    ./wakatime.nix
     ./neo-tree.nix
     ./autopairs.nix
     ./telescope.nix
