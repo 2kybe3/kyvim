@@ -53,6 +53,7 @@
                       nixfmt
                       prettier
                       prettierd
+                      wakatime-cli
                     ]
                   )
                 }
