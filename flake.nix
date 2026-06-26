@@ -50,9 +50,13 @@
                   pkgs.lib.makeBinPath (
                     with pkgs;
                     [
+                      # formatter
                       nixfmt
                       prettier
                       prettierd
+                      keep-sorted
+
+                      # wakatime
                       wakatime-cli
                     ]
                   )

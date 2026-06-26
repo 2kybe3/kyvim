@@ -9,6 +9,8 @@
       highlight.enable = true;
 
       grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+        # keep-sorted start block=yes
+
         bash
         c
         caddy
@@ -37,6 +39,8 @@
         xml
         yaml
         zsh
+
+        # keep-sorted end
       ];
     };
   };
