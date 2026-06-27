@@ -3,7 +3,6 @@
     ./cmp.nix
     ./cord.nix
     ./flash.nix
-    ./image.nix
     ./treesj.nix
     ./crates.nix
     ./conform.nix
