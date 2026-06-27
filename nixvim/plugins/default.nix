@@ -1,6 +1,5 @@
 {
   imports = [
-    ./extra
     ./cmp.nix
     ./cord.nix
     ./flash.nix

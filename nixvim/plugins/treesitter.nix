@@ -19,10 +19,12 @@
         css
         csv
         git-rebase
+        html
         hurl
         javascript
         json
         just
+        latex
         lua
         make
         markdown
@@ -31,7 +33,6 @@
         ron
         rust
         sql
-        superhtml
         toml
         typescript
         vim
