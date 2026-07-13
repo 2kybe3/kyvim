@@ -1,4 +1,6 @@
 {
+  enableMan = false;
+
   imports = [
     ./lsp
     ./plugins
