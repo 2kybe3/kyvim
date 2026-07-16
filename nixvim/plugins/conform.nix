@@ -12,6 +12,7 @@
           "prettier"
         ];
         nix = [ "nixfmt" ];
+        rust = [ "rustfmt" ];
         "*" = [ "keep-sorted" ];
       };
     };
