@@ -5,6 +5,7 @@
     ./flash.nix
     ./treesj.nix
     ./crates.nix
+    ./treesitter
     ./conform.nix
     ./no-conf.nix
     ./orgmode.nix
@@ -17,7 +18,6 @@
     ./colorizer.nix
     ./lightline.nix
     ./mini-align.nix
-    ./treesitter.nix
     ./rustaceanvim.nix
     ./mini-surround.nix
   ];

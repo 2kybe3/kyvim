@@ -1,6 +1,6 @@
 {
   colorschemes.catppuccin.enable = true;
-  extraConfigLua = ''
+  extraConfigLua = /* lua */ ''
     require("catppuccin").setup({
       flavour = "macchiato",
       transparent_background = true,

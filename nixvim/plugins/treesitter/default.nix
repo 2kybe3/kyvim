@@ -1,12 +1,16 @@
 { pkgs, ... }: {
+  extraFiles."queries/nix/injections.scm".source = ./injections.scm;
+
   plugins = {
     treesitter-context = {
       enable = true;
       settings.max_lines = 4;
     };
+
     treesitter = {
       enable = true;
       highlight.enable = true;
+      nixvimInjections = false;
 
       grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
         # keep-sorted start block=yes
