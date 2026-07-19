@@ -6,15 +6,24 @@
         timeout_ms = 500;
         lsp_format = "fallback";
       };
-      formatters_by_ft = {
-        javascript = [
-          "prettierd"
-          "prettier"
-        ];
-        nix = [ "nixfmt" ];
-        rust = [ "rustfmt" ];
-        "*" = [ "keep-sorted" ];
-      };
+      formatters_by_ft =
+        let
+          prettier = [
+            "prettierd"
+            "prettier"
+
+          ];
+        in
+        {
+          javascript = prettier;
+          typescript = prettier;
+          html = prettier;
+          css = prettier;
+
+          nix = [ "nixfmt" ];
+          rust = [ "rustfmt" ];
+          "*" = [ "keep-sorted" ];
+        };
     };
   };
 }
