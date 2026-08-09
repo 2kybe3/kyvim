@@ -20,6 +20,8 @@
           html = prettier;
           css = prettier;
 
+          xml = [ "xmlformatter" ];
+
           nix = [ "nixfmt" ];
           rust = [ "rustfmt" ];
           "*" = [ "keep-sorted" ];

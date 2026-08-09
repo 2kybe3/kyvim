@@ -53,6 +53,7 @@
                       # formatter
                       nixfmt
                       prettier
+                      xmlformat
                       prettierd
                       keep-sorted
 
