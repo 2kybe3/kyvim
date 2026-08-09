@@ -1,14 +1,6 @@
 { lib, ... }: {
   lsp.keymaps = [
     {
-      action = lib.nixvim.mkRaw "require('telescope.builtin').lsp_definitions";
-      key = "gd";
-    }
-    {
-      action = lib.nixvim.mkRaw "require('telescope.builtin').lsp_references";
-      key = "gD";
-    }
-    {
       key = "<leader>fm";
       lspBufAction = "format";
     }

@@ -1,24 +1,28 @@
 {
   imports = [
-    ./cmp.nix
-    ./cord.nix
-    ./flash.nix
-    ./treesj.nix
-    ./crates.nix
-    ./treesitter
-    ./conform.nix
-    ./no-conf.nix
-    ./orgmode.nix
-    ./harpoon.nix
-    ./gitsigns.nix
-    ./wakatime.nix
-    ./neo-tree.nix
+    # keep-sorted start
+
     ./autopairs.nix
-    ./telescope.nix
+    ./cmp.nix
     ./colorizer.nix
+    ./conform.nix
+    ./cord.nix
+    ./crates.nix
+    ./flash.nix
+    ./gitsigns.nix
+    ./harpoon.nix
     ./lightline.nix
     ./mini-align.nix
-    ./rustaceanvim.nix
     ./mini-surround.nix
+    ./neo-tree.nix
+    ./no-conf.nix
+    ./orgmode.nix
+    ./rustaceanvim.nix
+    ./telescope.nix
+    ./treesitter
+    ./treesj.nix
+    ./wakatime.nix
+
+    # keep-sorted end
   ];
 }
