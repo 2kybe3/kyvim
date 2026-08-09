@@ -8,6 +8,7 @@
     ./conform.nix
     ./cord.nix
     ./crates.nix
+    ./dap
     ./flash.nix
     ./gitsigns.nix
     ./harpoon.nix
