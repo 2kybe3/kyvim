@@ -11,7 +11,6 @@
           prettier = [
             "prettierd"
             "prettier"
-
           ];
         in
         {
@@ -21,6 +20,9 @@
           css = prettier;
 
           xml = [ "xmlformatter" ];
+          cs = {
+            lsp_format = "prefer";
+          };
 
           nix = [ "nixfmt" ];
           rust = [ "rustfmt" ];
