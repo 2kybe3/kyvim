@@ -1,8 +1,4 @@
-{ pkgs, lib, ... }: {
-  extraPlugins = with pkgs.vimPlugins; [
-    omnisharp-extended-lsp-nvim
-  ];
-
+{ lib, ... }: {
   plugins = {
     web-devicons.enable = true;
     telescope = {
@@ -16,18 +12,13 @@
 
   keymaps = [
     {
-      action = lib.nixvim.mkRaw "require('omnisharp_extended').telescope_lsp_definition";
+      action = lib.nixvim.mkRaw "require('telescope.builtin').lsp_definitions";
       key = "gd";
     }
     {
-      action = lib.nixvim.mkRaw "function() require('omnisharp_extended').telescope_lsp_definition({ jump_type = \"vsplit\" }) end";
-      key = "sgd";
-    }
-    {
-      action = lib.nixvim.mkRaw "require('omnisharp_extended').telescope_lsp_references";
+      action = lib.nixvim.mkRaw "require('telescope.builtin').lsp_references";
       key = "gD";
     }
-
     {
       action = lib.nixvim.mkRaw "require('telescope.builtin').diagnostics";
       key = "<leader>dd";

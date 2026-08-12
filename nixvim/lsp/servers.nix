@@ -1,16 +1,22 @@
 {
-  plugins.lsp = {
-    enable = true;
+  plugins.lspconfig.enable = true;
+  lsp = {
     servers = {
-      # keep-sorted start block=yes
+      "*".config = {
+        capabilities.textDocument.semanticTokens.multilineTokenSupport = true;
+        root_markers = [ ".git" ];
+      };
+
+      # keep-sorted start
 
       basedpyright.enable = true;
       bashls.enable = true;
       gopls.enable = true;
+      html.enable = true;
       jsonls.enable = true;
       just.enable = true;
       nil_ls.enable = true;
-      omnisharp.enable = true;
+      sqls.enable = true;
       statix.enable = true;
       ts_ls.enable = true;
       yamlls.enable = true;
@@ -18,5 +24,8 @@
 
       # keep-sorted end
     };
+    inlayHints.enable = true;
   };
+
+  plugins.roslyn.enable = true;
 }

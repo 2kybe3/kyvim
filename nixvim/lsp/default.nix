@@ -4,10 +4,6 @@
     ./servers.nix
   ];
 
-  lsp = {
-    inlayHints.enable = true;
-  };
-
   extraConfigLua = ''
     vim.diagnostic.config({
       float = true,
