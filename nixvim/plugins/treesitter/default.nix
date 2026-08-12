@@ -24,6 +24,9 @@
         css
         csv
         git-rebase
+        go
+        gomod
+        gosum
         html
         hurl
         javascript
