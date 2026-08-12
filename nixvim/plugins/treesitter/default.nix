@@ -17,6 +17,7 @@
 
         bash
         c
+        c-sharp
         caddy
         cmake
         comment
@@ -33,6 +34,7 @@
         make
         markdown
         nix
+        razor
         regex
         ron
         rust
