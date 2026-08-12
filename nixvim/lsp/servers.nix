@@ -13,6 +13,7 @@
       bashls.enable = true;
       gopls.enable = true;
       html.enable = true;
+      jdtls.enable = true;
       jsonls.enable = true;
       just.enable = true;
       nil_ls.enable = true;
