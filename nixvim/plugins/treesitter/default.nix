@@ -27,6 +27,7 @@
         go
         gomod
         gosum
+        hcl
         html
         hurl
         javascript
