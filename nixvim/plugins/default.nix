@@ -22,6 +22,7 @@
     ./telescope.nix
     ./treesitter
     ./treesj.nix
+    ./vimtex.nix
     ./wakatime.nix
 
     # keep-sorted end

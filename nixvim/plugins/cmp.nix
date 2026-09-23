@@ -4,6 +4,7 @@
     autoEnableSources = true;
     settings = {
       sources = [
+        { name = "vimtex"; }
         { name = "async_path"; }
         { name = "nvim_lsp"; }
         { name = "luasnip"; }
