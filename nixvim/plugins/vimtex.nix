@@ -1,3 +1,6 @@
-{
-  plugins.vimtex.enable = true;
+{ pkgs, ... }: {
+  plugins.vimtex = {
+    enable = true;
+    texlivePackage = pkgs.texliveFull;
+  };
 }
