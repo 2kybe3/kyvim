@@ -57,8 +57,8 @@
                       prettierd
                       keep-sorted
 
-                      # wakatime
-                      wakatime-cli
+                      # pdf viewer (latex)
+                      zathura
                     ]
                   )
                 }
