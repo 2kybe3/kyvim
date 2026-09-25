@@ -16,6 +16,7 @@
       jdtls.enable = true;
       jsonls.enable = true;
       just.enable = true;
+      ltex.enable = true;
       nil_ls.enable = true;
       sqls.enable = true;
       statix.enable = true;
