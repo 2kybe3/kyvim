@@ -1,5 +1,11 @@
 {
   opts = {
+    spell = true;
+    spelllang = [
+      "de"
+      "en"
+    ];
+
     number = true;
     undofile = true;
     ignorecase = true;
