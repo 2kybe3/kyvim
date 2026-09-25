@@ -2,7 +2,7 @@
   keymaps = [
     {
       action = lib.nixvim.mkRaw "require('dapui').toggle";
-      key = "<leader>d";
+      key = "<leader>dd";
     }
   ];
   plugins = {
