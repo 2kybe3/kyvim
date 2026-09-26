@@ -19,6 +19,7 @@
       nil_ls.enable = true;
       sqls.enable = true;
       statix.enable = true;
+      svelte.enable = true;
       ts_ls.enable = true;
       yamlls.enable = true;
       zls.enable = true;

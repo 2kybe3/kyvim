@@ -43,6 +43,7 @@
         ron
         rust
         sql
+        svelte
         toml
         typescript
         vim
