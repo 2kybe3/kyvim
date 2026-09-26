@@ -16,6 +16,7 @@
         {
           javascript = prettier;
           typescript = prettier;
+          svelte = prettier;
           html = prettier;
           css = prettier;
 
