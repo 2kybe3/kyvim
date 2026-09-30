@@ -30,6 +30,7 @@
         hcl
         html
         hurl
+        java
         javascript
         json
         just
