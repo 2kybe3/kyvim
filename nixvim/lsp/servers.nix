@@ -20,6 +20,7 @@
       sqls.enable = true;
       statix.enable = true;
       svelte.enable = true;
+      tinymist.enable = true;
       ts_ls.enable = true;
       yamlls.enable = true;
       zls.enable = true;
