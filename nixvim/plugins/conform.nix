@@ -6,6 +6,7 @@
         timeout_ms = 500;
         lsp_format = "fallback";
       };
+
       formatters_by_ft =
         let
           prettier = [
@@ -27,7 +28,7 @@
 
           nix = [ "nixfmt" ];
           rust = [ "rustfmt" ];
-          "*" = [ "keep-sorted" ];
+          "*".__raw = ''{ "keep-sorted", lsp_format = "last" }'';
         };
     };
   };
