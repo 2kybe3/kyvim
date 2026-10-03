@@ -22,6 +22,7 @@
     ./telescope.nix
     ./treesitter
     ./treesj.nix
+    ./typst.nix
     ./vimtex.nix
     ./wakatime.nix
 
