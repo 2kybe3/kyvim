@@ -28,7 +28,7 @@
 
           nix = [ "nixfmt" ];
           rust = [ "rustfmt" ];
-          "*".__raw = ''{ "keep-sorted", lsp_format = "last" }'';
+          "*" = [ "keep-sorted" ];
         };
     };
   };

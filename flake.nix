@@ -59,6 +59,9 @@
 
                       # pdf viewer (latex)
                       zathura
+
+                      # DAP
+                      gdb
                     ]
                   )
                 }
