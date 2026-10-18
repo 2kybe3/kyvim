@@ -11,6 +11,7 @@
 
       basedpyright.enable = true;
       bashls.enable = true;
+      glsl_analyzer.enable = true;
       gopls.enable = true;
       html.enable = true;
       jdtls.enable = true;
