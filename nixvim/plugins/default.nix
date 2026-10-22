@@ -24,7 +24,6 @@
     ./treesj.nix
     ./typst.nix
     ./vimtex.nix
-    ./wakatime.nix
 
     # keep-sorted end
   ];
