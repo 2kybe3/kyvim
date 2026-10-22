@@ -27,20 +27,29 @@
           inherit system;
           config.allowUnfree = true;
         };
-
-        base = nixvim.legacyPackages.${system}.makeNixvimWithModule {
-          inherit pkgs;
-          module = import ./nixvim;
-          extraSpecialArgs = {
-            inherit inputs;
+      in
+      {
+        packages.default = (self.lib.mkPackage { inherit pkgs; }).wrapped;
+      }
+    )
+    // {
+      lib.mkPackage =
+        {
+          pkgs,
+          theme ? null,
+        }:
+        rec {
+          unwrapped = nixvim.legacyPackages.${pkgs.stdenv.hostPlatform.system}.makeNixvimWithModule {
+            inherit pkgs;
+            module = import ./nixvim;
+            extraSpecialArgs = {
+              inherit inputs theme;
+            };
           };
-        };
+          wrapped = pkgs.symlinkJoin {
+            inherit (unwrapped) name meta;
 
-        nvim =
-          pkgs.symlinkJoin {
-            inherit (base) name;
-
-            paths = [ base ];
+            paths = [ unwrapped ];
 
             buildInputs = with pkgs; [ makeWrapper ];
 
@@ -66,13 +75,7 @@
                   )
                 }
             '';
-          }
-          // {
-            inherit (base) meta options;
           };
-      in
-      {
-        packages.default = nvim;
-      }
-    );
+        };
+    };
 }

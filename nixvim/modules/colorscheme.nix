@@ -1,20 +1,34 @@
 {
-  colorschemes.catppuccin.enable = true;
-  extraConfigLua = /* lua */ ''
-    require("catppuccin").setup({
-      flavour = "macchiato",
-      transparent_background = true,
-      float = {
-        transparent = true,
-        solid = false,
-      },
-      lsp_styles = {
-        integrations = {
-          cmp = true,
-          gitsigns = true,
+  pkgs,
+  theme ? null,
+  ...
+}:
+if theme != null then
+  {
+    extraPlugins = [ theme.theme ];
+    extraConfigLua = ''
+      vim.cmd.colorscheme('${theme.name}')
+      vim.g.tinted_background_transparent = 1
+    '';
+  }
+else
+  {
+    colorschemes.catppuccin.enable = true;
+    extraConfigLua = ''
+      require("catppuccin").setup({
+        flavour = "macchiato",
+        transparent_background = true,
+        float = {
+          transparent = true,
+          solid = false,
         },
-      },
-    })
-    vim.cmd("colorscheme catppuccin-nvim")
-  '';
-}
+        lsp_styles = {
+          integrations = {
+            cmp = true,
+            gitsigns = true,
+          },
+        },
+      })
+      vim.cmd("colorscheme catppuccin-nvim")
+    '';
+  }
