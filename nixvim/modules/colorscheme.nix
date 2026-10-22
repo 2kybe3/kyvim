@@ -7,8 +7,8 @@ if theme != null then
   {
     extraPlugins = [ theme.theme ];
     extraConfigLua = ''
-      vim.cmd.colorscheme('${theme.name}')
       vim.g.tinted_background_transparent = 1
+      vim.cmd.colorscheme('${theme.name}')
     '';
   }
 else
