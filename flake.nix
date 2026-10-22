@@ -10,6 +10,8 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    basenix.url = "git+https://git.kybe.xyz/2kybe3/basenix.git";
   };
 
   outputs =
@@ -36,14 +38,17 @@
       lib.mkPackage =
         {
           pkgs,
-          theme ? null,
+          basenix ? inputs.basenix.lib.mkLib {
+            inherit pkgs;
+            theme = "gruvbox-dark";
+          },
         }:
         rec {
           unwrapped = nixvim.legacyPackages.${pkgs.stdenv.hostPlatform.system}.makeNixvimWithModule {
             inherit pkgs;
             module = import ./nixvim;
             extraSpecialArgs = {
-              inherit inputs theme;
+              inherit inputs basenix;
             };
           };
           wrapped = pkgs.symlinkJoin {
