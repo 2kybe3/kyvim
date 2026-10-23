@@ -9,7 +9,6 @@
         { name = "nvim_lsp"; }
         { name = "luasnip"; }
         { name = "buffer"; }
-        { name = "calc"; }
       ];
       mapping = {
         "<C-Space>" = "cmp.mapping.complete()";
