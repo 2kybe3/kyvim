@@ -9,11 +9,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1792689289,
-        "narHash": "sha256-0tmm95nUm2mApmTGl4u2yiTUed7CG9Lg1B6GKFP7DPc=",
+        "lastModified": 1792776061,
+        "narHash": "sha256-wgNK//43FehrSdtG7kJ4g5vbyDbSdQ5xpRTeIXPUiF0=",
         "ref": "refs/heads/main",
-        "rev": "fcec3a23329e14bd537689fd76fe238964c992e4",
-        "revCount": 2,
+        "rev": "06eec0e03939697fa97062547090d8862a1909a5",
+        "revCount": 8,
         "type": "git",
         "url": "https://git.kybe.xyz/2kybe3/basenix.git"
       },
@@ -165,6 +165,7 @@
       },
       "original": {
         "owner": "tinted-theming",
+        "ref": "spec-0.11",
         "repo": "schemes",
         "type": "github"
       }
