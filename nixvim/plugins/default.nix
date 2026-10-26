@@ -17,7 +17,6 @@
     ./mini-surround.nix
     ./neo-tree.nix
     ./no-conf.nix
-    ./orgmode.nix
     ./rustaceanvim.nix
     ./telescope.nix
     ./treesitter
