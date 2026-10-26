@@ -1,10 +1,13 @@
 { lib, pkgs, ... }: {
+  extraPackages = [ pkgs.gdb ];
+
   keymaps = [
     {
       action = lib.nixvim.mkRaw "require('dapui').toggle";
       key = "<leader>dd";
     }
   ];
+
   plugins = {
     dap-virtual-text.enable = true;
     dap-ui.enable = true;
@@ -35,7 +38,7 @@
         '';
       };
 
-      configurations = rec {
+      configurations = {
         rust = [
           {
             name = "launch";

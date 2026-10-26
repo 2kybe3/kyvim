@@ -1,4 +1,16 @@
-{
+{ pkgs, ... }: {
+  extraPackages = with pkgs; [
+    # keep-sorted start
+
+    keep-sorted
+    nixfmt
+    prettier
+    prettierd
+    xmlformat
+
+    # keep-sorted end
+  ];
+
   plugins.conform-nvim = {
     enable = true;
     settings = {

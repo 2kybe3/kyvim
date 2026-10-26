@@ -1,0 +1,29 @@
+{
+  lsp.servers = {
+    "*".config = {
+      capabilities.textDocument.semanticTokens.multilineTokenSupport = true;
+      root_markers = [ ".git" ];
+    };
+
+    # keep-sorted start
+
+    basedpyright.enable = true;
+    bashls.enable = true;
+    glsl_analyzer.enable = true;
+    gopls.enable = true;
+    html.enable = true;
+    jdtls.enable = true;
+    jsonls.enable = true;
+    just.enable = true;
+    nil_ls.enable = true;
+    sqls.enable = true;
+    statix.enable = true;
+    svelte.enable = true;
+    tinymist.enable = true; # typst
+    ts_ls.enable = true;
+    yamlls.enable = true;
+    zls.enable = true;
+
+    # keep-sorted end
+  };
+}
