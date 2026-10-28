@@ -19,6 +19,7 @@
     jdtls.enable = true;
     jsonls.enable = true; # json
     just.enable = true; # just
+    neocmake.enable = true; # CMake
     nil_ls.enable = true; # nix
     sqls.enable = true; # sql
     statix.enable = true; # nix
