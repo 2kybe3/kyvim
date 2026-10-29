@@ -15,6 +15,7 @@
     clangd.enable = true; # c / c++
     glsl_analyzer.enable = true; # glsl (shaders)
     gopls.enable = true; # go
+    graphql.enable = true;
     html.enable = true; # html
     jdtls.enable = true;
     jsonls.enable = true; # json
