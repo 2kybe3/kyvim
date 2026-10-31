@@ -20,6 +20,7 @@
     jdtls.enable = true;
     jsonls.enable = true; # json
     just.enable = true; # just
+    lua_ls.enable = true;
     neocmake.enable = true; # CMake
     nil_ls.enable = true; # nix
     sqls.enable = true; # sql

@@ -2,7 +2,7 @@
   plugins.harpoon = {
     enable = true;
     enableTelescope = true;
-    luaConfig.post = ''
+    luaConfig.post = /* lua */ ''
       local harpoon = require("harpoon")
 
       harpoon:setup()
