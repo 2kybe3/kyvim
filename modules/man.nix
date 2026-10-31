@@ -1,3 +1,0 @@
-{
-  enableMan = false;
-}

@@ -1,4 +1,7 @@
 {
+  enableMan = false;
+  viAlias = true;
+  vimAlias = true;
   performance = {
     byteCompileLua = {
       enable = true;
