@@ -6,6 +6,7 @@
     nixfmt
     prettier
     prettierd
+    stylua
     xmlformat
 
     # keep-sorted end
@@ -14,10 +15,12 @@
   plugins.conform-nvim = {
     enable = true;
     settings = {
+      log_level = "trace";
       format_on_save = {
         timeout_ms = 500;
         lsp_format = "fallback";
       };
+      formatters.injected.options.ignore_errors = false;
 
       formatters_by_ft =
         let
@@ -39,8 +42,12 @@
           };
 
           nix = [ "nixfmt" ];
+          lua = [ "stylua" ];
           rust = [ "rustfmt" ];
-          "*" = [ "keep-sorted" ];
+          "*" = [
+            "injected"
+            "keep-sorted"
+          ];
         };
     };
   };

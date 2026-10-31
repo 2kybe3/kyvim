@@ -15,21 +15,21 @@
       enable = true;
 
       adapters = {
-        rust-gdb = lib.nixvim.mkRaw /* lua */ ''
+        rust-gdb = lib.nixvim.mkRaw ''
           {
-            type = "executable",
+              type = "executable",
             command = "${lib.getExe' pkgs.rustc "rust-gdb"}",
             args = { "--interpreter=dap", "--eval-command", "set print pretty on" }
           }
         '';
-        gdb = lib.nixvim.mkRaw /* lua */ ''
+        gdb = lib.nixvim.mkRaw ''
           {
             type = "executable",
             command = "${lib.getExe pkgs.gdb}",
             args = { "--interpreter=dap", "--eval-command", "set print pretty on" }
           }
         '';
-        coreclr = lib.nixvim.mkRaw /* lua */ ''
+        coreclr = lib.nixvim.mkRaw ''
           {
             type = 'executable',
             command = '${lib.getExe pkgs.netcoredbg}',
@@ -44,7 +44,7 @@
             name = "launch";
             type = "rust-gdb";
             request = "launch";
-            program.__raw = /* lua */ ''
+            program.__raw = ''
               function()
                 return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
               end
@@ -57,12 +57,12 @@
             name = "Select and attach to process";
             type = "gdb";
             request = "attach";
-            program.__raw = /* lua */ ''
+            program.__raw = ''
               function()
                 return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
               end
             '';
-            pid.__raw = /* lua */ ''
+            pid.__raw = ''
               function()
                 local name = vim.fn.input('Executable name (filter): ')
                 return require("dap.utils").pick_process({ filter = name })
@@ -75,7 +75,7 @@
             type = "gdb";
             request = "attach";
             target = "localhost:1234";
-            program.__raw = /* lua */ ''
+            program.__raw = ''
               function()
                 return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
               end
@@ -88,7 +88,7 @@
             type = "coreclr";
             name = "launch - netcoredbg";
             request = "launch";
-            program.__raw = /* lua */ ''
+            program.__raw = ''
               function()
                 return vim.fn.input('Path to dll: ', vim.fn.getcwd() .. '/bin/Debug/net8.0/', 'file')
               end
@@ -99,12 +99,12 @@
             type = "coreclr";
             name = "attach - netcoredbg";
             request = "attach";
-            program.__raw = /* lua */ ''
+            program.__raw = ''
               function()
                 return vim.fn.input('Path to dll: ', vim.fn.getcwd() .. '/bin/Debug/net8.0/', 'file')
               end
             '';
-            processId.__raw = /* lua */ ''
+            processId.__raw = ''
               function()
                 local name = vim.fn.input('Executable name (filter): ')
                 return require("dap.utils").pick_process({ filter = name })

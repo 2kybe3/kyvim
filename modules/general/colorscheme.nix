@@ -8,6 +8,6 @@
   ];
   extraConfigLua = ''
     vim.g.tinted_background_transparent = 1
-    vim.cmd.colorscheme('kyvim')
+    vim.cmd.colorscheme("kyvim")
   '';
 }
