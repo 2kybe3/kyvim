@@ -17,7 +17,7 @@
     settings = {
       log_level = "trace";
       format_on_save = {
-        timeout_ms = 500;
+        timeout_ms = 10 * 1000; # 10s
         lsp_format = "fallback";
       };
       formatters.injected.options.ignore_errors = false;
