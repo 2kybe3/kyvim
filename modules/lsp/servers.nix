@@ -10,6 +10,7 @@
 
     # keep-sorted start
 
+    asm_lsp.enable = true; # asm (NASM)
     basedpyright.enable = true; # python
     bashls.enable = true; # bash
     clangd.enable = true; # c / c++

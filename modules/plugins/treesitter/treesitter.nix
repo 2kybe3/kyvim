@@ -38,6 +38,7 @@
         lua
         make
         markdown
+        nasm
         nix
         razor
         regex
