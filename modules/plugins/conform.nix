@@ -4,6 +4,7 @@
 
     keep-sorted
     nixfmt
+    opentofu
     prettier
     prettierd
     stylua
@@ -40,6 +41,9 @@
           cs = {
             lsp_format = "prefer";
           };
+
+          tf = [ "tofu_fmt" ];
+          tfvars = [ "tofu_fmt" ];
 
           nix = [ "nixfmt" ];
           lua = [ "stylua" ];
