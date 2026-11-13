@@ -42,8 +42,9 @@
             lsp_format = "prefer";
           };
 
-          tf = [ "tofu_fmt" ];
-          tfvars = [ "tofu_fmt" ];
+          terraform = [ "tofu_fmt" ];
+          terraform-vars = [ "tofu_fmt" ];
+          hcl = [ "tofu_fmt" ];
 
           nix = [ "nixfmt" ];
           lua = [ "stylua" ];
