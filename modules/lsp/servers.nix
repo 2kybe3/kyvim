@@ -28,6 +28,7 @@
     statix.enable = true; # nix
     svelte.enable = true; # svelte
     tinymist.enable = true; # typst
+    tofu_ls.enable = true; # opentofu
     ts_ls.enable = true; # typescript
     yamlls.enable = true; # yaml
     zls.enable = true; # zig

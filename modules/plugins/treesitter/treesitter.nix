@@ -46,6 +46,7 @@
         rust
         sql
         svelte
+        terraform
         toml
         typescript
         typst
