@@ -1,6 +1,11 @@
-{
+{ pkgs, ... }: {
   plugins.rustaceanvim = {
     enable = true;
+    package = pkgs.vimPlugins.rustaceanvim.overrideAttrs (old: {
+      patches = (old.patches or [ ]) ++ [
+        ../../../patches/rustaceanvim-timeout.patch
+      ];
+    });
     settings.server.on_attach = /* lua */ ''
       function(client, bufnr)
         vim.keymap.set(

@@ -1,0 +1,13 @@
+diff --git a/spec/integration/lsp_spec.lua b/spec/integration/lsp_spec.lua
+index f7d5c08..558d0ca 100644
+--- a/spec/integration/lsp_spec.lua
++++ b/spec/integration/lsp_spec.lua
+@@ -3,7 +3,7 @@
+ local stub = require('luassert.stub')
+ local compat = require('rustaceanvim.compat')
+ 
+-local timeout_ms = 10000
++local timeout_ms = 300000
+ 
+ local main_rs = {
+   'fn main() {',

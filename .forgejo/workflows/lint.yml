@@ -14,5 +14,25 @@ jobs:
         with:
           install_options: --daemon
 
+      - name: Setup Attic
+        env:
+          ATTIC_TOKEN: ${{ secrets.ATTIC_KEY }}
+          ATTIC_ENDPOINT: ${{ vars.ATTIC_ENDPOINT }}
+          ATTIC_STORE: ${{ vars.ATTIC_STORE }}
+        run: |
+          nix shell nixpkgs#attic-client -c sh -c '
+            attic login "$ATTIC_STORE" "$ATTIC_ENDPOINT" "$ATTIC_TOKEN"
+            attic use "$ATTIC_STORE"
+          '
+
       - name: Lint
         run: nix flake check . -L --no-update-lock-file
+
+      - name: Push to Attic
+        if: always()
+        env:
+          ATTIC_STORE: ${{ vars.ATTIC_STORE }}
+        run: |
+          nix shell nixpkgs#attic-client -c sh -c '
+            attic push "$ATTIC_STORE" --ignore-upstream-cache-filter -j 64 $(ls -d /nix/store/*/)
+          '
